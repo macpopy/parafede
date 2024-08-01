@@ -1,0 +1,54 @@
+
+@include estilomenu;
+
+.buscar {
+    font-family: $fuente2;
+    background-color: white;
+    position: sticky;
+    top: 40px;
+    z-index: 1000;
+    margin: 20px 200px;
+
+    @include medida1 {
+        margin: 10px 50px; /* Ajustes para pantallas pequeñas */
+    }
+}
+
+/* Estilos vinilo-container */
+.vinilos-container {
+    padding: 20px;
+    margin: 100px;
+
+    @include medida3{
+        margin: 50px 10px; /* Ajustes para pantallas pequeñas */
+    }
+}
+
+/* Estilos para las tarjetas */
+.card {
+    border: 1px solid rgba(0, 0, 0, 0.3); /* Borde con sombra suave */
+    border-radius: 10px; /* Bordes redondeados */
+    transition: transform 0.3s ease; /* Transición suave al hacer hover */
+
+    &:hover {
+        transform: translateY(-10px); /* Efecto de elevación al hacer hover */
+    }
+
+    .card-img-top {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .card-title {
+        font-size: 1.2rem; /* Tamaño de fuente más grande */
+        color: $color1; /* Color del texto */
+        margin-bottom: 0; /* Eliminar margen inferior */
+        font-family: $fuente2;
+        font-weight: 400;
+    }
+
+    .card-text {
+        color: $color3; /* Color del texto secundario */
+        font-family: $fuente2;
+    }
+}
